@@ -11,6 +11,15 @@
 #define __syscall_brk 45
 #endif
 
+#ifdef __riscv
+#define __syscall_exit 93
+#define __syscall_read 63
+#define __syscall_write 64
+#define __syscall_close 57
+#define __syscall_open 1024
+#define __syscall_brk 214
+#endif
+
 typedef int FILE;
 
 void abort();

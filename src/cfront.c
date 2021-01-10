@@ -2146,7 +2146,12 @@ void parse_internal()
     elf_add_symbol("", 0, 0); /* undef symbol */
 
     /* architecture defines */
-    add_alias("__arm__", "1"); /* defined by GNU C and RealView */
+    if (0) {
+        add_alias("__arm__", "1"); /* defined by GNU C and RealView */
+    } else {
+        /* Older versions of the GCC toolchain defined __riscv__ */
+        add_alias("__riscv", "1");
+    }
 
     /* binary entry point: read params, call main, exit */
     ii = add_instr(OP_label);
