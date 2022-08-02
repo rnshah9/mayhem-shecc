@@ -2,5 +2,4 @@ project: shec
 target: shecc
 
 cmds:
-  - cmd: /shecc/out/shecc /test.c
-    filepath: /test.c
+  - cmd: /shecc @@
